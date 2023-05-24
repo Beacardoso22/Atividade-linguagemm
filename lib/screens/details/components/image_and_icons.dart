@@ -1,3 +1,4 @@
+//importando bibliotecas
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -5,22 +6,34 @@ import '../../../constants.dart';
 import 'icon_card.dart';
 
 class ImageAndIcons extends StatelessWidget {
+//classe com o nome ImageAndIcons que se extende
+//mostrando  um widget  
   const ImageAndIcons({
+    //contrutor
     Key key,
     @required this.size,
   }) : super(key: key);
 
   final Size size;
+  //declara uma variavel size
 
   @override
   Widget build(BuildContext context) {
+    //controi a interface do usuário
     return Padding(
+      //return o widget
+
       padding: const EdgeInsets.only(bottom: kDefaultPadding * 3),
+      //cria um objeto
       child: SizedBox(
+        //define um espaço
         height: size.height * 0.8,
+        //define a altura 
         child: Row(
+          //cria uma linha quando contem dois widget
           children: <Widget>[
             Expanded(
+              //expande para preencher o espaço
               child: Padding(
                 padding:
                     const EdgeInsets.symmetric(vertical: kDefaultPadding * 3),

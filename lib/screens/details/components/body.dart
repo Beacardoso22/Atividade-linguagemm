@@ -27,32 +27,43 @@ class Body extends StatelessWidget {
           ImageAndIcons(size: size),
           TitleAndPrice(title: "Angelica", country: "Russia", price: 440),
           SizedBox(height: kDefaultPadding),
+          //mostra um widget chamado ImageAndIcons
+          //Com um titulo Angelica, Rússia
           Row(
+            //cria uma linha de widgetsa
             children: <Widget>[
+              //mostra um widget
               SizedBox(
+                //define um espaço de tamanho personalizado na linha
                 width: size.width / 2,
                 height: 84,
                 child: FlatButton(
+                  //cria um botão retangular
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.only(
                       topRight: Radius.circular(20),
                     ),
                   ),
                   color: kPrimaryColor,
+                  //sem sombras
                   onPressed: () {},
                   child: Text(
                     "Buy Now",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 16,
+                      //exibe o texto buy now
                     ),
                   ),
                 ),
               ),
               Expanded(
+                //cria um botão expansaível
                 child: FlatButton(
+                  //cria um botão expansível
                   onPressed: () {},
                   child: Text("Description"),
+                  //exibe esse texto dentro do botão
                 ),
               ),
             ],
