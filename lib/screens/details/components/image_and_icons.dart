@@ -19,7 +19,7 @@ class ImageAndIcons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //controi a interface do usuário
+    //constroi a interface do usuário
     return Padding(
       //return o widget
 
@@ -36,14 +36,21 @@ class ImageAndIcons extends StatelessWidget {
               //expande para preencher o espaço
               child: Padding(
                 padding:
+                //preencimento lateral
                     const EdgeInsets.symmetric(vertical: kDefaultPadding * 3),
+                    //espaço vazio
                 child: Column(
+                  //conteúdo principal
                   children: <Widget>[
+                    //uma lista de widgets que serão colocados dentro da coluna
                     Align(
+                      //alinha o widget
                       alignment: Alignment.topLeft,
+                      //alinhamento
                       child: IconButton(
                         padding:
                             EdgeInsets.symmetric(horizontal: kDefaultPadding),
+                            //define preenchimento na horizontal
                         icon: SvgPicture.asset("assets/icons/back_arrow.svg"),
                         onPressed: () {
                           Navigator.pop(context);
@@ -51,23 +58,31 @@ class ImageAndIcons extends StatelessWidget {
                       ),
                     ),
                     Spacer(),
+                    //widget que preenche o espaço disponível
                     IconCard(icon: "assets/icons/sun.svg"),
                     IconCard(icon: "assets/icons/icon_2.svg"),
                     IconCard(icon: "assets/icons/icon_3.svg"),
                     IconCard(icon: "assets/icons/icon_4.svg"),
+                    //icones personalizados
                   ],
                 ),
               ),
             ),
             Container(
+              //decoração do fundo
               height: size.height * 0.8,
+              //define altura
               width: size.width * 0.75,
+              //alrgura
               decoration: BoxDecoration(
+                //estilo da decoração do container
                 borderRadius: BorderRadius.only(
+                  //cantos arredondados
                   topLeft: Radius.circular(63),
                   bottomLeft: Radius.circular(63),
                 ),
                 boxShadow: [
+                  //define sombra
                   BoxShadow(
                     offset: Offset(0, 10),
                     blurRadius: 60,
@@ -75,10 +90,12 @@ class ImageAndIcons extends StatelessWidget {
                   ),
                 ],
                 image: DecorationImage(
+                  //define a imagem de fundo
                   alignment: Alignment.centerLeft,
                   fit: BoxFit.cover,
                   image: AssetImage("assets/images/img.png"),
                 ),
+                //imagem para preencher o container
               ),
             ),
           ],
