@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-Importa o pacote flutter/material.dart, que contém as classes e widgets do Flutter para construir interfaces de usuário.
+//Importa o pacote flutter/material.dart, que contém as classes e widgets do Flutter para construir interfaces de usuário.
 
 import '../../../constants.dart';
 // Importa um arquivo chamado constants.dart localizado duas pastas acima do local atual. Provavelmente, este arquivo contém constantes ou variáveis globais utilizadas no aplicativo.
