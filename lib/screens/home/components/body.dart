@@ -1,3 +1,4 @@
+//importando biblioteca
 import 'package:flutter/material.dart';
 import 'package:plant_app/constants.dart';
 
@@ -7,21 +8,31 @@ import 'recomend_plants.dart';
 import 'title_with_more_bbtn.dart';
 
 class Body extends StatelessWidget {
+  /*classe com o nome Body estende para construi
+  o widget para o usuário*/
   @override
   Widget build(BuildContext context) {
-    // It will provie us total height  and width of our screen
+    //construtor do widget do usuário
     Size size = MediaQuery.of(context).size;
-    // it enable scrolling on small device
+    //tamanho da tela
     return SingleChildScrollView(
+      //returna como widget principal
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+        //lista de widgets que serão exibidos 
         children: <Widget>[
           HeaderWithSearchBox(size: size),
+          //widget personalizado
           TitleWithMoreBtn(title: "Recomended", press: () {}),
+          //titulo personalizado que exibe
           RecomendsPlants(),
+          //mostra uma lista de coisas recomendadas
           TitleWithMoreBtn(title: "Featured Plants", press: () {}),
+          //titulo do botão
           FeaturedPlants(),
+          //destaque
           SizedBox(height: kDefaultPadding),
+          //espaçamento
         ],
       ),
     );
