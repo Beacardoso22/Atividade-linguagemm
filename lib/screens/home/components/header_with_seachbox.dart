@@ -66,10 +66,15 @@ class HeaderWithSearchBox extends StatelessWidget {
             ),
           ),
           Positioned(
+            //posiciona o widget
             bottom: 0,
+            //cordenadas
             left: 0,
+            //cordenadas
             right: 0,
+            //cordenadas
             child: Container(
+              //widget que envolve o conteúdo da caixa de pesquisa
               //É um container posicionado na parte inferior do cabeçalho, usado para criar a caixa de pesquisa.
               alignment: Alignment.center,
               // Define a posição do container como centralizada.
@@ -79,28 +84,46 @@ class HeaderWithSearchBox extends StatelessWidget {
               height: 54,
               //Define a altura do container como 54 pixels.
               decoration: BoxDecoration(
+                //define a decoração do container
                 color: Colors.white,
+                //define a cor
+                
                 borderRadius: BorderRadius.circular(20),
+                //define os cantos do container
                 boxShadow: [
+                  //define a sombra do container
                   BoxShadow(
                     offset: Offset(0, 10),
+                    //deslocamento da sombra
                     blurRadius: 50,
+                    //define o raio de desfoque da sombra
                     color: kPrimaryColor.withOpacity(0.23),
+                    //define a cor da sombra
                   ),
                 ],
               ),
               child: Row(
+                //define o conteúdo do container
                 children: <Widget>[
                   Expanded(
+                    //usado para ocupar o espaço restante no row
                     child: TextField(
+                      //permite digitar texto
                       onChanged: (value) {},
+                      //o texto vai ser alterado
                       decoration: InputDecoration(
+                        //configura a aparência do campo de texto
                         hintText: "Search",
+                        //define o texto 
                         hintStyle: TextStyle(
+                          //estilo do texto
                           color: kPrimaryColor.withOpacity(0.5),
+                          //cor
                         ),
                         enabledBorder: InputBorder.none,
+                        //define a borda
                         focusedBorder: InputBorder.none,
+                        //define a borda também
                         // surffix isn't working properly  with SVG
                         // thats why we use row
                         // suffixIcon: SvgPicture.asset("assets/icons/search.svg"),
@@ -108,6 +131,7 @@ class HeaderWithSearchBox extends StatelessWidget {
                     ),
                   ),
                   SvgPicture.asset("assets/icons/search.svg"),
+                  //é um widget que ira exibir a imagem localizada no caminho mostrado
                 ],
               ),
             ),
