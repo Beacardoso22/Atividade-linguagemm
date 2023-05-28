@@ -66,6 +66,7 @@ class HeaderWithSearchBox extends StatelessWidget {
             ),
           ),
           Positioned(
+            //Posiciona um widget na pilha, neste caso, na parte inferior do cabeçalho.
             bottom: 0,
             left: 0,
             right: 0,
@@ -79,13 +80,14 @@ class HeaderWithSearchBox extends StatelessWidget {
               height: 54,
               //Define a altura do container como 54 pixels.
               decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(20),
+              //Define a decoração do container, que inclui a cor de fundo e as bordas arredondadas.
+                color: Colors.white, // Define a cor de fundo como branco
+                borderRadius: BorderRadius.circular(20), // Define um raio de borda circular de 20 pixels
                 boxShadow: [
                   BoxShadow(
-                    offset: Offset(0, 10),
-                    blurRadius: 50,
-                    color: kPrimaryColor.withOpacity(0.23),
+                    offset: Offset(0, 10), // Define o deslocamento do sombreado em relação ao elemento em x=0 e y=10
+                    blurRadius: 50, // Define o raio de desfoque do sombreado como 50 pixels
+                    color: kPrimaryColor.withOpacity(0.23), // Define a cor do sombreado com base na cor primária com 23% de opacidade
                   ),
                 ],
               ),
@@ -94,20 +96,25 @@ class HeaderWithSearchBox extends StatelessWidget {
                   Expanded(
                     child: TextField(
                       onChanged: (value) {},
+                      /* Define uma função vazia que será chamada quando o texto do TextField for alterado
+                      decoration: InputDecoration*/ 
                       decoration: InputDecoration(
-                        hintText: "Search",
+                        hintText: "Search", /* Define um texto de dica dentro do TextField com o valor "Search"*/
                         hintStyle: TextStyle(
                           color: kPrimaryColor.withOpacity(0.5),
+                          // Define a cor do texto de dica com base na cor primária com 50% de opacidade
                         ),
                         enabledBorder: InputBorder.none,
+                        // Define uma borda desativada (invisível) quando o TextField não está focado
                         focusedBorder: InputBorder.none,
+                        // Define uma borda desativada (invisível) quando o TextField está focado
                         // surffix isn't working properly  with SVG
                         // thats why we use row
                         // suffixIcon: SvgPicture.asset("assets/icons/search.svg"),
                       ),
                     ),
                   ),
-                  SvgPicture.asset("assets/icons/search.svg"),
+                  SvgPicture.asset("assets/icons/search.svg"), // Define um ícone no final do TextField usando uma imagem SVG
                 ],
               ),
             ),
